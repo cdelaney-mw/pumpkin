@@ -1,6 +1,8 @@
+% This code should show a figure of a pumpkin
+
 %% PUMPKIN
  
- bumps=10; bdepth=.1; bdepth2=.02; dimple=.2; width_r=1; height_r=.8;
+bumps=10; bdepth=.1; bdepth2=.02; dimple=.2; width_r=1; height_r=.8;
 [ Xs, Ys, Zs ] = sphere(199);
 Rxy=(0-(1-mod(linspace(0,bumps*2,200),2)).^2)*bdepth + (0-(1-mod(linspace(0,bumps*4,200),2)).^2)*bdepth2;
 Rz = (0-linspace(1,-1,200)'.^4)*dimple;
