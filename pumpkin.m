@@ -1,7 +1,7 @@
 % This code should show a figure of a pumpkin
 
-%% PUMPKIN
- 
+% PUMPKIN
+
 bumps=10; bdepth=.1; bdepth2=.02; dimple=.2; width_r=1; height_r=.8;
 [ Xs, Ys, Zs ] = sphere(199);
 Rxy=(0-(1-mod(linspace(0,bumps*2,200),2)).^2)*bdepth + (0-(1-mod(linspace(0,bumps*4,200),2)).^2)*bdepth2;
@@ -11,7 +11,7 @@ Yp = (width_r+Rxy).*Ys;
 Zp = (height_r+Rz).*Zs.*(Rxy+1);
 Cp = hypot(hypot(Xp,Yp),width_r.*Zs.*(Rxy+1));
 
-%% STEM
+% STEM
 
 sheight=.5; scurve=.4;
 srad = [ 1.5 1 repelem(.7, 6) ] .* [ repmat([.1 .06],1,bumps) .1 ]';
@@ -20,7 +20,7 @@ Xs = (scurve-cos(phi).*srad).*cos(theta)-scurve;
 Zs = (sheight-cos(phi).*srad).*sin(theta) + height_r-max(0,dimple*.9);
 Ys = -sin(phi).*srad;
 
-%% DRAW
+% DRAW
 
 surf(Xp,Yp,Zp,Cp,'Clipping','off');
 shading interp
