@@ -1,9 +1,6 @@
 % This code should show a figure of a pumpkin
 
 % PUMPKIN
-% intentional error for code analyzer to catch
-2x = 12;
-
 
 bumps=10; bdepth=.1; bdepth2=.02; dimple=.2; width_r=1; height_r=.8;
 [ Xs, Ys, Zs ] = sphere(199);
